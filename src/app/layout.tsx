@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`font-roboto ${inter.className}`}>
-        <div className='flex flex-col mx-auto h-full'>
+        <div className='flex flex-col mx-auto min-h-screen'>
           <Header />
-          <main className='h-full w-full'>{children}</main>
+          <main className='h-full w-full grow-1'>{children}</main>
 
           <Footer />
         </div>

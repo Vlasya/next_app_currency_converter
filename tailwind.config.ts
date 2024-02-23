@@ -14,11 +14,14 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       backgroundColor: {
-        pageBg: '#F6F7FF', 
+        pageBg: '#F6F7FF',
+        blueBg: '#2C36F2',
       },
-      colors:{
+      colors: {
         activeEl: '#2C36F2',
-        baseColor:'#707C87'
+        baseColor: '#707C87',
+        lightText: '#F6F7FF',
+        blackText:'#1F1E25',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],

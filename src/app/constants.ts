@@ -1,7 +1,8 @@
 export enum Routs {
   Base = '/',
   Contacts = '/contacts',
-  Converter = '/converter',
+  ConverterPage = '/converter_page',
+  Converter='/converter_page/converter',
   Profile = '/profile',
   Services = '/services',
   Help = '/help',

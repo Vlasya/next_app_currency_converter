@@ -28,8 +28,8 @@ export default function Header() {
 
             <NavLink
               text={NavLinks.Converter}
-              url={Routs.Converter}
-              isActive={pathname === Routs.Converter}
+              url={Routs.ConverterPage}
+              isActive={pathname === Routs.ConverterPage || pathname === Routs.Converter}
             />
 
             <NavLink
