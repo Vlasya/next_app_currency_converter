@@ -11,7 +11,7 @@ export default function NavLink({ text, url, isActive }: Props) {
     <Link
       className={`font-medium text-base  ${
         isActive ? 'text-activeEl' : 'text-baseColor'
-      } hover:activeEl  sm:py-6   `}
+      } hover:activeEl  `}
       href={url}
     >
       {text}
