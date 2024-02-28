@@ -2,18 +2,20 @@ import Link from 'next/link';
 
 interface Props {
   href: string;
-  textColor?: string;
-  bgColor?: string;
   text: string;
+  isBlueBtn?: boolean;
 }
 
-export default function CustomLink({ href, textColor, bgColor, text }: Props) {
+export default function CustomLink({ href, text, isBlueBtn }: Readonly<Props>) {
   return (
-    <Link href={href} className={` w-64 h14 `}>
-      <div className={`text-${textColor} bg-${bgColor} w-[234px] h-[53px] flex justify-center items-center rounded`}>
-      {text}
+    <Link href={href}>
+      <div
+        className={`text-${isBlueBtn ? 'lightText' : 'baseColor'} bg-${
+          isBlueBtn ? 'blueBg' : 'pageBg'
+        } w-[234px] h-[53px] flex justify-center items-center rounded ${isBlueBtn&& 'bg-blueBg'} `}
+      >
+        {text}
       </div>
-      
     </Link>
   );
 }
