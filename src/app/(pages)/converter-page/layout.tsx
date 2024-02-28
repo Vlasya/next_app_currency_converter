@@ -12,30 +12,15 @@ export default function ConverterLayout({
   return (
     <div className='h-full'>
       <div
-        className='w-full min-h-96'
-        style={{
-          backgroundImage: `url(${bg_image.src})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          width: '100%',
-          height: '400px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-around',
-        }}
+        className='w-full h-[400px] flex justify-around  items-center  bg-auto bg-no-repeat bg-center '
+        style={{ backgroundImage: `url(${bg_image.src})` }}
       >
         <div className='flex flex-col text-lightText '>
           <div className='font-bold text-6xl'>Чіп Чендж</div>
           <div className='py-6 font-medium text-xl'>
             Обмінник валют - навчальний
           </div>
-          <CustomLink
-            href={Routs.Converter}
-            text='Конвертер валют'
-            textColor='baseColor'
-            bgColor='pageBg'
-          />
+          <CustomLink href={Routs.Converter} text='Конвертер валют' />
         </div>
         <div className=' flex'>
           <Image src={cars_image} alt='cars' width={340} height={215} />
