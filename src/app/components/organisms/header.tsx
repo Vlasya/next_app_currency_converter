@@ -1,7 +1,7 @@
 'use client';
-import Logo from '@/components/atoms/logo';
-import NavLink from '@/components/molecules/navLink';
-import ProfileLink from '@/components/molecules/profileLink';
+import Logo from '@/app/components/atoms/Logo';
+import NavLink from '@/app/components/molecules/NavLink';
+import ProfileLink from '@/app/components/molecules/ProfileLink';
 import { Routs, NavLinks } from '@/app/constants';
 
 import { usePathname } from 'next/navigation';

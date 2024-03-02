@@ -24,6 +24,10 @@ const config: Config = {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },
+      borderColor:{
+        inputBorder:'#C1C2CA',
+        focusBorder:'#707C87'
+      }
     },
   },
   plugins: [],
