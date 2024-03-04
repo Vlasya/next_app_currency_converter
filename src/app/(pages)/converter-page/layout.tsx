@@ -1,6 +1,6 @@
 import bg_image from './images/converter_bg_img.png';
 import cars_image from './images/card_img.png';
-import CustomLink from '@/components/molecules/customLink';
+import CustomLink from '@/app/components/molecules/CustomLink';
 import Image from 'next/image';
 import { Routs } from '@/app/constants';
 

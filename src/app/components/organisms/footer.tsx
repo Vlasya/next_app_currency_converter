@@ -1,12 +1,12 @@
 'use client';
-import Logo from '@/components/atoms/logo';
-import NavLink from '@/components/molecules/navLink';
+import Logo from '@/app/components/atoms/Logo';
+import NavLink from '@/app/components/molecules/NavLink';
 import { NavLinks, Routs } from '@/app/constants';
 import { usePathname } from 'next/navigation';
-import InfoBlock from '@/components/molecules/infoBlock';
+import InfoBlock from '@/app/components/molecules/InfoBlock';
 import phone from '@/images/phone.svg'
 import phone_2 from '@/images/phone_2.svg'
-import SocialIconLinksBlock from '@/components/molecules/socialIconLinksBlock';
+import SocialIconLinksBlock from '@/app/components/molecules/SocialIconLinksBlock';
 
 export default function Footer() {
   const pathname = usePathname();

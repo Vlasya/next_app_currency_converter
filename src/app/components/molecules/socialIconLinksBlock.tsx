@@ -1,4 +1,4 @@
-import { SocialIconLink } from '../atoms/socialIconLink';
+import { SocialIconLink } from '../atoms/SocialIconLink';
 import facebook_svg from '@/images/facebook.svg';
 import instagram_svg from '@/images/instagram.svg';
 import twitter_svg from '@/images/twitter.svg';

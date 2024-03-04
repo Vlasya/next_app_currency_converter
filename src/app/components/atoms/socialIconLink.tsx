@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Icon from '@/components/atoms/icon';
+import Icon from '@/app/components/atoms/Icon';
 
 interface Props {
   href: string;

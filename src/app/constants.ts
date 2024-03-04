@@ -2,7 +2,7 @@ export enum Routs {
   Base = '/',
   Contacts = '/contacts',
   ConverterPage = '/converter-page',
-  Converter='/converter-page/converter',
+  Converter = '/converter-page/converter',
   Profile = '/profile',
   Services = '/services',
   Help = '/help',
@@ -15,3 +15,7 @@ export enum NavLinks {
   Services = 'Послуги',
   Help = 'Задати питання',
 }
+
+export const REVALIDATE_TAGS = {
+  exchangeRate: 'exchangeRate',
+};

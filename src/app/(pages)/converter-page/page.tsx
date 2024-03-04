@@ -1,4 +1,4 @@
-import CustomLink from '@/app/components/molecules/customLink';
+import CustomLink from '@/app/components/molecules/CustomLink';
 import { Routs } from '@/app/constants';
 import Image from 'next/image';
 import converter_page_img from './images/converter_img.png';
