@@ -39,3 +39,10 @@ export interface CalculateType {
   isInitialChanged?: boolean;
   isTargetChanged?: boolean;
 }
+
+
+export interface HistoryItem{
+    date:string;
+    initialValue:string;
+    targetValue:string;
+}

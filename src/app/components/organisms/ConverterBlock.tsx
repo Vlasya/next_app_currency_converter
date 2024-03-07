@@ -8,12 +8,15 @@ import { ExchangeData } from '@/app/types';
 import { formatDate, getLastWeeksDate, getTodayDate } from '@/helpers/date';
 import { getExchangeRateData } from '@/actions/getExchangeRate';
 import { convertToSelectOptions } from '@/helpers/common';
+import { useStore } from '../../../../store/application.store';
 
 interface Props {
   currentExchangeData: ExchangeData | null;
 }
 
 export default function ConverterBlock({ currentExchangeData }: Props) {
+  const addNewHistoryItem = useStore((state) => state.addHistoryItem);
+
   const [exchangeData, setExchangeData] = useState<ExchangeData | null>(
     currentExchangeData
   );
@@ -45,13 +48,6 @@ export default function ConverterBlock({ currentExchangeData }: Props) {
       initialCurrency: initialCurrency,
     }).then((data) => {
       setExchangeData(data);
-      setSelectedDate(
-        formatDate({
-          year: data?.year,
-          month: data?.month,
-          day: data?.day,
-        })
-      );
       setExchangeRate(data.conversion_rates[targetCurrency]);
       setTargetInputValue(
         initialInputValue * data.conversion_rates[targetCurrency]!
@@ -95,8 +91,15 @@ export default function ConverterBlock({ currentExchangeData }: Props) {
     setExchangeRate(exchangeData?.conversion_rates[currency]);
   };
 
+  const onSaveHistory = () => {
+    addNewHistoryItem({
+      date: selectedDate,
+      initialValue: `${initialInputValue.toFixed(2)} ${initialCurrency}`,
+      targetValue: `${targetInputValue.toFixed(2)} ${targetCurrency}`,
+    });
+  };
   return (
-    <div className='bg-white h-[400px] min-w-[960px] p-[50px] flex flex-col justify-center'>
+    <div className='bg-white h-[400px] min-w-[960px] max-w-[1000px] p-[50px] flex flex-col justify-center'>
       <div className='text-blackText font-bold text-[40px] leading-[56px] pb-[70px]'>
         Конвертер валют
       </div>
@@ -129,11 +132,7 @@ export default function ConverterBlock({ currentExchangeData }: Props) {
           maxValue={getTodayDate()}
           onChange={handleDateChange}
         />
-        <Button
-          isBlueBtn
-          text='Зберегти результат'
-          onClick={onUpdateExchangeDate}
-        />
+        <Button isBlueBtn text='Зберегти результат' onClick={onSaveHistory} />
       </div>
     </div>
   );
