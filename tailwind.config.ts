@@ -20,6 +20,7 @@ const config: Config = {
         baseColor: '#707C87',
         lightText: '#F6F7FF',
         blackText: '#1F1E25',
+        lightGreen:'#C1C2CA'
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],

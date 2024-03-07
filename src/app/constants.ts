@@ -19,3 +19,8 @@ export enum NavLinks {
 export const REVALIDATE_TAGS = {
   exchangeRate: 'exchangeRate',
 };
+
+export enum InputsNames {
+  Initial = 'Initial',
+  Target = 'Target',
+}
